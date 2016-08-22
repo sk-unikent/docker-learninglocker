@@ -2,7 +2,6 @@ FROM skylarkelty/centos:latest
 MAINTAINER "Skylar Kelty" <s.kelty@kent.ac.uk>
 ADD ./shared/files/remi.repo /etc/yum.repos.d/remi.repo
 ADD ./shared/files/nginx.repo /etc/yum.repos.d/nginx.repo
-ADD ./shared/files/supervisord.service /etc/systemd/system/multi-user.target.wants/supervisord.service
 RUN yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
                    nginx cronie \
                    && yum clean all
